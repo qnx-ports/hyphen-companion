@@ -3,7 +3,7 @@
 # Maintainer: Felix Xing <fxing@qnx.com>
 pkgname=hyphen
 pkgver=2.8.8
-pkgrel=0
+pkgrel=${pkgrel:-0}
 pkgdesc="Library for high quality hyphenation and justification"
 url="https://hunspell.sourceforge.net/"
 arch="all"
@@ -59,6 +59,7 @@ en() {
 
 }
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 ee514952be56869840b70fb74f60eba14dc4de246733ff8705492367e8cf00c485f8778a9d5a7ba374c988d4ac9fedbe75826dc559e1b62465dbfba21f6ce7de  hyphen-2.8.8.tar.gz
 "
